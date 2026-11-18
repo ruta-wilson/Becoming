@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Becoming – A 3-day women’s wellness retreat | BeYou &amp; Thrive Rwanda</title>
+  <meta name="description" content="Becoming: a 3-day women’s wellness retreat, 4–6 December 2026 at Karame Farm Stay, Kigali.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #f6f1e7;
+      --cream-deep: #ece4d2;
+      --sage: #6b7f3e;
+      --sage-dark: #55662f;
+      --sage-soft: #e3e6cf;
+      --brown: #3f2418;
+      --text: #4a3a31;
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--text);
+      font-family: "Lato", system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    h1, h2, h3 {
+      font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+      color: var(--brown);
+      line-height: 1.15;
+      margin: 0 0 .6em;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: var(--sage-dark); }
+    :focus-visible { outline: 3px solid var(--sage); outline-offset: 3px; }
+
+    .wrap { width: min(1080px, 100% - 2.5rem); margin-inline: auto; }
+    section { padding: clamp(3rem, 7vw, 5rem) 0; }
+
+    /* Hero */
+    .hero { padding: 0; }
+    .hero-photo {
+      position: relative;
+      min-height: clamp(280px, 48vw, 460px);
+      background: url("images/hero.jpg") center 25% / cover no-repeat;
+    }
+    .hero-photo::after {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(246,241,231,0) 55%, var(--cream) 100%);
+    }
+    .logos {
+      display: flex; align-items: center; gap: 1.2rem;
+      padding-top: 1.5rem;
+    }
+    .logos img { height: 72px; width: auto; border-radius: 50%; }
+    .logos img.beyou { border-radius: 8px; height: 62px; }
+    .logos .divider { width: 1px; height: 56px; background: #c9bda5; }
+    .hero-text { margin-top: -2.5rem; position: relative; z-index: 1; padding-bottom: 1rem; }
+    .hero-text h1 { font-size: clamp(3.2rem, 11vw, 6rem); font-weight: 700; margin-bottom: .15em; }
+    .tagline { font-family: "Playfair Display", Georgia, serif; font-style: italic; font-size: clamp(1.15rem, 3vw, 1.6rem); color: var(--brown); margin: 0 0 1rem; }
+    .meta { font-weight: 700; color: var(--sage-dark); margin: 0; }
+    .meta span { margin-right: 1.4rem; display: inline-block; }
+
+    /* Intro */
+    .intro p { max-width: 62ch; }
+    .intro h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+    .intro .lead { font-size: 1.2rem; }
+
+    /* Look forward to */
+    .forward { background: var(--sage-soft); }
+    .forward h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 1.5rem; }
+    .grid { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .grid li {
+      background: var(--cream);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.3rem;
+      display: flex; gap: .9rem; align-items: flex-start;
+      line-height: 1.5;
+    }
+    .grid li::before {
+      content: ""; flex: 0 0 10px; height: 10px; margin-top: .5em;
+      border-radius: 50% 0 50% 0; background: var(--sage);
+    }
+
+    /* Venue */
+    .venue-grid { display: grid; gap: 2rem; grid-template-columns: 1fr; }
+    .venue h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+    .facts { list-style: none; padding: 0; margin: 1.2rem 0 0; }
+    .facts li { padding: .5rem 0; border-bottom: 1px solid #d9cfba; }
+    .facts strong { color: var(--brown); }
+    .gallery { display: grid; gap: .8rem; grid-template-columns: repeat(3, 1fr); margin-top: 2rem; }
+    .gallery img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--radius); }
+
+    /* Investment */
+    .invest { background: var(--cream-deep); }
+    .invest h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+    .prices { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-top: 1.5rem; }
+    .price { background: var(--cream); border-radius: var(--radius); padding: 1.6rem; }
+    .price .amount { font-family: "Playfair Display", Georgia, serif; font-size: 2rem; font-weight: 700; color: var(--brown); display: block; }
+    .price .label { color: var(--text); }
+
+    /* Register */
+    .register { text-align: center; }
+    .register h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+    .register p { max-width: 52ch; margin-inline: auto; }
+    .btn {
+      display: inline-block; margin: 1.2rem 0 2rem;
+      background: var(--sage-dark); color: #fff; text-decoration: none;
+      font-family: "Playfair Display", Georgia, serif; font-size: 1.5rem; font-weight: 500;
+      padding: .8rem 2.6rem; border-radius: 999px;
+      transition: background .2s ease, transform .2s ease;
+    }
+    .btn:hover { background: var(--brown); transform: translateY(-2px); }
+    .pay {
+      display: inline-block; text-align: left;
+      background: var(--sage-soft); border-radius: var(--radius); padding: 1.3rem 1.8rem; line-height: 1.8;
+    }
+    .pay h3 { font-size: 1.25rem; margin-bottom: .3rem; }
+
+    footer { text-align: center; padding: 2rem 0 3rem; font-size: .95rem; color: #7a6a5e; }
+
+    @media (min-width: 820px) {
+      .venue-grid { grid-template-columns: 1fr 1fr; align-items: start; }
+    }
+    @media (max-width: 520px) {
+      .gallery { grid-template-columns: 1fr; }
+      .gallery img { aspect-ratio: 4 / 3; }
+      .btn { width: 100%; text-align: center; padding-inline: 1rem; }
+      .pay { width: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .btn { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="wrap logos">
+      <img class="beyou" src="images/beyou-logo.png" alt="BeYou Whole &amp; Healthy logo">
+      <span class="divider" aria-hidden="true"></span>
+      <img src="images/thrive-logo.png" alt="Thrive Rwanda logo">
+    </div>
+    <div class="hero-photo" role="img" aria-label="A relaxed woman smiling softly at home"></div>
+    <div class="wrap hero-text">
+      <h1>Becoming</h1>
+      <p class="tagline">Quiet your mind. Nourish your body. Nurture yourself.</p>
+      <p class="meta"><span>4–6 December 2026</span><span>Karame Farm Stay, Kigali</span></p>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div class="wrap">
+        <h2>A 3-day women’s wellness retreat</h2>
+        <p class="lead">An invitation to step away from your daily routine, slow down, reconnect with yourself and give your body and mind the care they deserve.</p>
+        <p>Over these few days, we’ll combine moments of relaxation, learning, gentle movement, nourishing food and meaningful conversations with other women.</p>
+      </div>
+    </section>
+
+    <section class="forward">
+      <div class="wrap">
+        <h2>What to look forward to</h2>
+        <ul class="grid">
+          <li>Comfortable accommodation in a peaceful natural setting</li>
+          <li>Three healthy and nourishing meals per day, plus morning and afternoon snacks</li>
+          <li>Workshop on hormonal changes and nutrition</li>
+          <li>Mindfulness and stress management sessions</li>
+          <li>Yin yoga, breathing exercises and gentle morning walks in nature</li>
+          <li>Healthy cooking workshop</li>
+          <li>Relaxing massage</li>
+          <li>Personalised wellness plan to guide and support you throughout 2027</li>
+          <li>Goodie bag to take home</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="venue">
+      <div class="wrap">
+        <div class="venue-grid">
+          <div>
+            <h2>Retreat details</h2>
+            <p>A beautiful, peaceful natural setting approximately 30 minutes from Kigali.</p>
+          </div>
+          <ul class="facts">
+            <li><strong>Dates:</strong> 4–6 December 2026</li>
+            <li><strong>Venue:</strong> Karame Farm Stay, Kigali</li>
+            <li><strong>Capacity:</strong> Limited to 12 participants</li>
+          </ul>
+        </div>
+        <div class="gallery">
+          <img src="images/karame-room.jpg" alt="A bedroom at Karame Farm Stay with a wooden bed and sage green walls" loading="lazy">
+          <img src="images/karame-kitchen.jpg" alt="The kitchen at Karame Farm Stay with a large wooden island" loading="lazy">
+          <img src="images/karame-terrace.jpg" alt="Wooden chairs on a striped rug outside Karame Farm Stay" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="invest">
+      <div class="wrap">
+        <h2>The investment</h2>
+        <div class="prices">
+          <div class="price">
+            <span class="amount">530,000 RWF</span>
+            <span class="label">per person in a single room</span>
+          </div>
+          <div class="price">
+            <span class="amount">445,000 RWF</span>
+            <span class="label">per person sharing a room (with a friend)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="register" id="register">
+      <div class="wrap">
+        <h2>Join us</h2>
+        <p>Places are limited to 12 participants. Fill in the registration form to reserve your spot.</p>
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSc2sscuH-7LMwdXhftLXQgbh9jboP8LDz5a0zZkNja0Wme-Ug/viewform?usp=header" target="_blank" rel="noopener noreferrer">Register now</a>
+        <div>
+          <div class="pay">
+            <h3>Payment</h3>
+            <strong>MTN MoMo:</strong> Code 6893<br>
+            <strong>Account name:</strong> Be You Holistic Health<br>
+            <strong>Contact:</strong> <a href="tel:+250795448852">+250 795 448 852</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">Becoming · Hosted by BeYou &amp; Thrive Rwanda · 4–6 December 2026</div>
+  </footer>
+
+</body>
+</html>
